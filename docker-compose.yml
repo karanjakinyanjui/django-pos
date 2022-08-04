@@ -31,7 +31,7 @@ services:
 
   django_pos:
     build: ./djangoPOS
-    command: sh -c "python manage.py migrate && python manage.py runserver 0.0.0.0:5005"
+    command: sh -c "python manage.py migrate; python manage.py runserver 0.0.0.0:5005"
     container_name: django-pos
     volumes:
       - ./djangoPOS/:/usr/src/app/
@@ -43,27 +43,6 @@ services:
     networks:
       - network
 
-  app:
-    build:
-      context: app
-      dockerfile: Dockerfile
-    container_name: phppos
-    ports:
-      - "4041:80"
-    environment:
-      APP_ENV: "prod"
-      APP_DEBUG: "False"
-      APP_PORT: 4041
-      DATABASE_NAME: app_database
-      DATABASE_USERNAME: app_database_user
-      DATABASE_PASSWORD: app_database_password
-      DATABASE_HOSTNAME: db
-    volumes:
-      - ./app/src:/var/www/public
-    depends_on:
-      - db
-    networks:
-      - network
 
 networks:
   network:
