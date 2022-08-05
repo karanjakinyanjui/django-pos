@@ -49,8 +49,8 @@ class Items(models.Model):
 	product_id = models.CharField(unique=True, max_length=255, blank=True, null=True)
 	ecommerce_product_id = models.CharField(max_length=255, blank=True, null=True)
 	ecommerce_product_quantity = models.CharField(max_length=255, blank=True, null=True)
-	description = models.TextField()
-	size = models.CharField(max_length=255)
+	description = models.TextField(blank=True, null=True)
+	size = models.CharField(max_length=255, blank=True, null=True)
 	tax_included = models.BooleanField(default=True)
 	cost_price = models.DecimalField(max_digits=23, decimal_places=10)
 	unit_price = models.DecimalField(max_digits=23, decimal_places=10)
@@ -87,7 +87,7 @@ class Items(models.Model):
 	width = models.DecimalField(max_digits=23, decimal_places=10, blank=True, null=True)
 	height = models.DecimalField(max_digits=23, decimal_places=10, blank=True, null=True)
 	ecommerce_shipping_class_id = models.CharField(max_length=255, blank=True, null=True)
-	long_description = models.TextField()
+	long_description = models.TextField(blank=True, null=True)
 	allow_price_override_regardless_of_permissions = models.BooleanField(default=False)
 	main_image = models.ForeignKey('ItemImages', models.DO_NOTHING, blank=True, null=True)
 	only_integer = models.BooleanField(default=True)
@@ -111,7 +111,6 @@ class Items(models.Model):
 		return self.name
 
 	class Meta:
-		managed = False
 		db_table = 'phppos_items'
 		verbose_name_plural = 'Items'
 		verbose_name = 'Item'

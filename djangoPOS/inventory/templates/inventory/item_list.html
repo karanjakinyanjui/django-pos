@@ -77,14 +77,13 @@
                     role="group"
                     aria-label="Basic example"
                   >
-                    <button
+                    <a
                       type="button"
                       class="btn btn-light"
-                      data-bs-toggle="modal"
-                      data-bs-target="#exampleModal"
+                      href="{% url 'update_items' item.item_id %}"
                     >
                       Edit
-                    </button>
+                    </a>
                     <button
                       class="btn btn-light"
                       id="moreAction1"
@@ -145,68 +144,5 @@
   </div>
 </div>
 
-
-
-
-{% comment %} #New Item {% endcomment %}
-<div
-  class="modal fade"
-  id="exampleModal"
-  tabindex="-1"
-  aria-labelledby="exampleModalLabel"
-  aria-hidden="true"
->
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content ">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Edit Item</h5>
-        <button
-          type="button"
-          class="btn-close"
-          data-bs-dismiss="modal"
-          aria-label="Close"
-        ></button>
-      </div>
-      <div class="modal-body">
-<div class="form-floating mb-3">
-<input type="text" class="form-control" id="name" placeholder="Enter name"></input>
-<label for="name" class="form-label">Item Name:</label>
-</div>
-<div class="form-floating mb-3">
-<input type="select-one" class="form-control" id="category_id" placeholder="Enter category_id"></input>
-<label for="category_id" class="form-label">Category:</label>
-</div>
-<div class="form-floating mb-3">
-<input type="select-one" class="form-control" id="supplier_id" placeholder="Enter supplier_id"></input>
-<label for="supplier_id" class="form-label">Supplier:</label>
-</div>
-<div class="form-floating mb-3">
-<input type="text" class="form-control" id="item_number" placeholder="Enter item_number"></input>
-<label for="item_number" class="form-label">UPC/EAN/ISBN:</label>
-</div>
-<div class="form-floating mb-3">
-<input type="text" class="form-control" id="cost_price" placeholder="Enter cost_price"></input>
-<label for="cost_price" class="form-label"> <i class="fa-solid fa-circle-dollar-to-slot"></i>Cost Price (Without Tax):</label>
-</div>
-<div class="form-floating mb-3">
-<input type="text" class="form-control" id="unit_price" placeholder="Enter unit_price"></input>
-<label for="unit_price" class="form-label"> <i class="fa-solid fa-circle-dollar-to-slot"></i> Selling Price:</label>
-</div>
-<div class="form-floating mb-3">
-<input type="text" class="form-control" id="reorder_level" placeholder="Enter reorder_level"></input>
-<label for="reorder_level" class="form-label">Reorder Level:</label>
-</div>
-      </div>
-      <div class="modal-footer">
-        <a href="{% url 'update_items'%}" class="text-gray"
-                      ><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
-                        Edit
-                      </button></a
-                    >
-        <button type="button" class="btn btn-primary ">Save</button>
-      </div>
-    </div>
-  </div>
-</div>
 {% endblock content %}
 
