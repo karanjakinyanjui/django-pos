@@ -13,7 +13,7 @@ class AppFiles(models.Model):
 
     class Meta:
         managed = False
-        db_table = 'phppos_app_files'
+        db_table = 'pos_app_files'
 
 
 class TaxClasses(models.Model):
@@ -25,7 +25,7 @@ class TaxClasses(models.Model):
 
     class Meta:
         managed = False
-        db_table = 'phppos_tax_classes'
+        db_table = 'pos_tax_classes'
 
 
 class AppConfig(models.Model):
@@ -34,4 +34,4 @@ class AppConfig(models.Model):
 
     class Meta:
         managed = False
-        db_table = 'phppos_app_config'
+        db_table = 'pos_app_config'

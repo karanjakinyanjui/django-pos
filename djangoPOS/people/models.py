@@ -25,7 +25,7 @@ class People(models.Model):
 
     class Meta:
         managed = False
-        db_table = 'phppos_people'
+        db_table = 'pos_people'
 
     @property
     def name(self):
@@ -58,7 +58,7 @@ class Suppliers(models.Model):
 
     class Meta:
         managed = False
-        db_table = 'phppos_suppliers'
+        db_table = 'pos_suppliers'
 
 
     def __str__(self) -> str:
@@ -71,7 +71,7 @@ class Manufacturers(models.Model):
 
     class Meta:
         managed = False
-        db_table = 'phppos_manufacturers'
+        db_table = 'pos_manufacturers'
 
 
     def __str__(self) -> str:
@@ -86,7 +86,7 @@ class Employees(models.Model):
 
     class Meta:
         managed = False
-        db_table = 'phppos_employees'
+        db_table = 'pos_employees'
 
 
 class Customers(models.Model):
@@ -98,4 +98,4 @@ class Customers(models.Model):
 
     class Meta:
         managed = False
-        db_table = 'phppos_customers'
+        db_table = 'pos_customers'

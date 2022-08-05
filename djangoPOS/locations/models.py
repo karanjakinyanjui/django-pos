@@ -89,4 +89,4 @@ class Locations(models.Model):
 
     class Meta:
         managed = False
-        db_table = 'phppos_locations'
+        db_table = 'pos_locations'

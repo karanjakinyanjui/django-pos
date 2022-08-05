@@ -37,7 +37,7 @@ class Categories(models.Model):
 
 	class Meta:
 		managed = False
-		db_table = 'phppos_categories'
+		db_table = 'pos_categories'
 
 
 class Items(models.Model):
@@ -111,7 +111,7 @@ class Items(models.Model):
 		return self.name
 
 	class Meta:
-		db_table = 'phppos_items'
+		db_table = 'pos_items'
 		verbose_name_plural = 'Items'
 		verbose_name = 'Item'
 
@@ -138,7 +138,7 @@ class ItemVariations(models.Model):
 
 	class Meta:
 		managed = False
-		db_table = 'phppos_item_variations'
+		db_table = 'pos_item_variations'
 
 
 class ItemImages(models.Model):
@@ -154,7 +154,7 @@ class ItemImages(models.Model):
 
 	class Meta:
 		managed = False
-		db_table = 'phppos_item_images'
+		db_table = 'pos_item_images'
 
 
 class Inventory(models.Model):
@@ -167,7 +167,7 @@ class Inventory(models.Model):
 
 	class Meta:
 		managed = False
-		db_table = 'phppos_inventory'
+		db_table = 'pos_inventory'
 
 
 class ItemKitItems(models.Model):
@@ -177,7 +177,7 @@ class ItemKitItems(models.Model):
 
 	class Meta:
 		managed = False
-		db_table = 'phppos_item_kit_items'
+		db_table = 'pos_item_kit_items'
 		unique_together = (('item_kit', 'item', 'quantity'),)
 
 
@@ -193,7 +193,7 @@ class ItemKits(models.Model):
 
 	class Meta:
 		managed = False
-		db_table = 'phppos_item_kits'
+		db_table = 'pos_item_kits'
 
 
 class ItemKitsTaxes(models.Model):
@@ -204,7 +204,7 @@ class ItemKitsTaxes(models.Model):
 
 	class Meta:
 		managed = False
-		db_table = 'phppos_item_kits_taxes'
+		db_table = 'pos_item_kits_taxes'
 		unique_together = (('item_kit', 'name', 'percent'),)
 
 
@@ -216,7 +216,7 @@ class ItemsTaxes(models.Model):
 
 	class Meta:
 		managed = False
-		db_table = 'phppos_items_taxes'
+		db_table = 'pos_items_taxes'
 		unique_together = (('item', 'name', 'percent'),)
 
 
@@ -231,7 +231,7 @@ class Receivings(models.Model):
 
 	class Meta:
 		managed = False
-		db_table = 'phppos_receivings'
+		db_table = 'pos_receivings'
 
 
 class ReceivingsItems(models.Model):
@@ -247,5 +247,5 @@ class ReceivingsItems(models.Model):
 
 	class Meta:
 		managed = False
-		db_table = 'phppos_receivings_items'
+		db_table = 'pos_receivings_items'
 		unique_together = (('receiving', 'item', 'line'),)

@@ -19,7 +19,7 @@ class Sales(models.Model):
 
     class Meta:
         managed = False
-        db_table = 'phppos_sales'
+        db_table = 'pos_sales'
 
 
 class SalesItemKits(models.Model):
@@ -34,7 +34,7 @@ class SalesItemKits(models.Model):
 
     class Meta:
         managed = False
-        db_table = 'phppos_sales_item_kits'
+        db_table = 'pos_sales_item_kits'
         unique_together = (('sale', 'item_kit', 'line'),)
 
 
@@ -48,7 +48,7 @@ class SalesItemKitsTaxes(models.Model):
 
     class Meta:
         managed = False
-        db_table = 'phppos_sales_item_kits_taxes'
+        db_table = 'pos_sales_item_kits_taxes'
         unique_together = (('sale', 'item_kit', 'line', 'name', 'percent'),)
 
 
@@ -65,7 +65,7 @@ class SalesItems(models.Model):
 
     class Meta:
         managed = False
-        db_table = 'phppos_sales_items'
+        db_table = 'pos_sales_items'
         unique_together = (('sale', 'item', 'line'),)
 
 
@@ -79,7 +79,7 @@ class SalesItemsTaxes(models.Model):
 
     class Meta:
         managed = False
-        db_table = 'phppos_sales_items_taxes'
+        db_table = 'pos_sales_items_taxes'
         unique_together = (('sale', 'item', 'line', 'name', 'percent'),)
 
 
@@ -90,7 +90,7 @@ class SalesPayments(models.Model):
 
     class Meta:
         managed = False
-        db_table = 'phppos_sales_payments'
+        db_table = 'pos_sales_payments'
         unique_together = (('sale', 'payment_type'),)
 
 
@@ -103,4 +103,4 @@ class Giftcards(models.Model):
 
     class Meta:
         managed = False
-        db_table = 'phppos_giftcards'
+        db_table = 'pos_giftcards'

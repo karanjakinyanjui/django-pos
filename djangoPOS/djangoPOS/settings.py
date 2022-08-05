@@ -81,7 +81,7 @@ WSGI_APPLICATION = 'djangoPOS.wsgi.application'
 DATABASES = {
     'default': {
         "ENGINE": "django.db.backends.mysql",
-        "NAME": "pointofsale",
+        "NAME": "django-pos",
         "USER": "root",
         "PASSWORD": "password",
         "HOST": "db",

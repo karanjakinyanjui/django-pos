@@ -1,6 +1,7 @@
 from django.shortcuts import render
 
 # Create your views here.
+from django.urls import reverse
 from django.views.generic import UpdateView
 
 from inventory.forms import ItemsForm
@@ -19,4 +20,5 @@ class UpdateItemView(UpdateView):
     model = Items
     form_class = ItemsForm
     template_name = "inventory/item_form.html"
+    success_url = "/items"
 
