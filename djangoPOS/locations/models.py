@@ -1,10 +1,11 @@
+from base.models import AbstractBaseModel
 from django.db import models
 
 # Create your models here.
 from app_config import models as config
 
 
-class Locations(models.Model):
+class Locations(AbstractBaseModel):
     location_id = models.AutoField(primary_key=True)
     name = models.TextField(blank=True, null=True)
     company = models.TextField(blank=True, null=True)
@@ -88,5 +89,5 @@ class Locations(models.Model):
     blockchyp_work_order_post_auth = models.TextField()
 
     class Meta:
-        managed = False
+        
         db_table = 'pos_locations'

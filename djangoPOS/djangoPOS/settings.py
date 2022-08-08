@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'base',
     'inventory',
     'locations',
     'people',
@@ -81,7 +82,7 @@ WSGI_APPLICATION = 'djangoPOS.wsgi.application'
 DATABASES = {
     'default': {
         "ENGINE": "django.db.backends.mysql",
-        "NAME": "django-pos",
+        "NAME": "django",
         "USER": "root",
         "PASSWORD": "password",
         "HOST": "db",

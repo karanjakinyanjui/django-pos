@@ -39,7 +39,7 @@ nav = [
                 "children": []
             },
             {
-                "link": "categories",
+                "url": "categories",
                 "name": "Categories",
                 "icon": "bx bx-folder",
                 "children": []

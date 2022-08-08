@@ -11,6 +11,9 @@
             <span class="badge bg-primary rounded-pill">{{ items.count }}</span>
           </h6>
         </div>
+          <div class="right pe-4">
+              <a class="btn btn-primary" href="{% url 'create_item' %}">Add</a>
+          </div>
         <div class="right pe-4">
           <div class="select-style-1">
             <div class="select-position select-sm">
@@ -80,7 +83,7 @@
                     <a
                       type="button"
                       class="btn btn-light"
-                      href="{% url 'update_items' item.item_id %}"
+                      href="{% url 'update_item' item.item_id %}"
                     >
                       Edit
                     </a>
