@@ -11,36 +11,29 @@
           </div>
 
             <ul class="sub-menu">
-              <li><a class="link_name" href="#">{{ link.name }}</a></li>
+              <li>
+                  <a class="link_name" href="#">{{ link.name }}</a>
+              </li>
                 {% for child in link.children %}
-                    {% if child.icon %}
-                      <li>
-                      {% if child.url %}
-                          <a href="{% url child.url %}">
-                            <i class="{{ child.icon }}"></i>
-                              {{ child.name }}
-                          </a>
-                      {% else %}
-                          <a href="{{ child.link }}">
-                            <i class="{{ child.icon }}"></i>
-                              {{ child.name }}
-                          </a>
-                      {% endif %}
-                      </li>
-                    {% endif %}
+                  <li>
+                      <a href="{{ child.link }}">
+                        <i class="{{ child.icon }}"></i>
+                          {{ child.name }}
+                      </a>
+                  </li>
                 {% endfor %}
-
             </ul>
       {% else %}
-        <a href="{{ link.link }}">
-          <i class="{{ link.icon }}"></i>
-          <span class="link_name">{{ link.name }}</span>
-        </a>
-
+          <a href="{{ link.link }}">
+            <i class="{{ link.icon }}"></i>
+            <span class="link_name">{{ link.name }}</span>
+          </a>
         <ul class="sub-menu blank">
-          <li><a class="link_name" href="{{ link.link }}">{{ link.name }}</a></li>
+            <li>
+                <a class="link_name" href="{{ link.link }}">{{ link.name }}</a>
+            </li>
         </ul>
-      {% endif %}
+  {% endif %}
   </li>
 {% endfor %}
 </ul>

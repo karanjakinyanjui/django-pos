@@ -1,5 +1,7 @@
+from django.urls import reverse
+
 nav = [
-    {"link": "", "name": "Dashboard", "icon": "bx bx-grid-alt", "children": []},
+    {"url": "home", "name": "Dashboard", "icon": "bx bx-grid-alt", "children": []},
     {
         "link": "#",
         "name": "Contacts",
@@ -25,7 +27,6 @@ nav = [
         "name": "Inventory",
         "icon": "bx bx-hdd",
         "children": [
-            {"link": "#", "name": "Inventory", "icon": None, "children": []},
             {
                 "url": "item_list",
                 "name": "Items",
@@ -136,7 +137,6 @@ nav = [
         "name": "Invoices",
         "icon": "bx bx-receipt",
         "children": [
-            {"link": "#", "name": "Invoices", "icon": None, "children": []},
             {
                 "link": "invoices/invoices/customers",
                 "name": "Customers",
@@ -174,11 +174,18 @@ nav = [
         "name": "Log Out",
         "icon": "bx bx-power-off",
         "children": [
-            {"link": "#", "name": "Log Out", "icon": None, "children": []}
         ]
     }
 ]
 
 
 def links_renderer(request):
+    for i in nav:
+        reverse_url(i)
+        for child in i.get("children", []):
+            reverse_url(child)
     return {"links": nav}
+
+
+def reverse_url(i):
+    i['link'] = i.get("link") or reverse(i['url'])
