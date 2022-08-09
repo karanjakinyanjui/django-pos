@@ -24,35 +24,6 @@ class ItemsForm(forms.ModelForm):
         self.helper.add_input(Submit('submit', 'Submit'))
 
     model = Items
-    fields = [
-        "name",
-        "barcode_name",
-        "category_id",
-        "supplier_id",
-        # "item_number",
-        # "product_id",
-        # "tags",
-        # "manufacturer_id",
-        # "description",
-        # "long_description",
-        # "info_popup",
-        # "weight",
-        # "weight_unit",
-        # "length",
-        # "default_quantity",
-        # "item_inactive",
-        # "is_barcoded",
-        # "is_favorite",
-        # "is_series_package",
-        # "series_quantity",
-        # "series_quantity",
-        # "series_days_to_use_within",
-        # "is_service",
-        # "allow_alt_description",
-        # "is_serialized",
-        # "disable_loyalty",
-        # "loyalty_multiplier"
-    ]
 
     class Meta:
         model = Items
@@ -64,6 +35,8 @@ class ItemsForm(forms.ModelForm):
             "tags",
             "manufacturer",
             "description",
+            'cost_price',
+            'unit_price',
             # "long_description",
             # "info_popup",
             "weight",
