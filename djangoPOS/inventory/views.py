@@ -53,3 +53,4 @@ class ItemCreateView(ItemFormView, CreateView):
 
 class ItemPricingView(ItemUpdateView):
     form_class = ItemsPricingForm
+

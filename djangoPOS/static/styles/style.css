@@ -211,6 +211,11 @@ body {
 }
 
 .home-section .home-main {
+  padding-top: 1px;
+  background: #e4e9f7;
+}
+
+.filters{
   background: #e4e9f7;
 }
 

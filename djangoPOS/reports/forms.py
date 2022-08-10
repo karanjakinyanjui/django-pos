@@ -8,10 +8,9 @@ Description:
 
 """
 from ast import Div
-from dataclasses import fields
 from crispy_forms.helper import FormHelper
-from crispy_forms.layout import Submit, Layout, Row, Column, HTML, Button
-from crispy_forms.bootstrap import InlineRadios, FormActions
+from crispy_forms.layout import Submit, Layout, Row, Column, Button
+from crispy_forms.bootstrap import FormActions
 from django import forms
 from django.utils import timezone
 
@@ -24,6 +23,10 @@ class ItemsForm(forms.ModelForm):
 
     class Meta:
         model = Items
+
+        # fields = [
+        #     __all__
+        # ]
 
         fields = [
             "name",
