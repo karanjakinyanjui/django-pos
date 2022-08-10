@@ -1,0 +1,48 @@
+{% extends 'main.html' %} {%load static %} {% block content %}
+
+<div class="card">
+    <div class="card-header"> Report Options </div>
+    <div class="card-body col-sm-12 col-md-12 col-lg-3 p-5 ">
+        <div class="form-floating mb-3">
+        <input type="select-one" class="form-control" id="report_date_range_simple" placeholder="Enter report_date_range_simple"></input>
+        <label for="report_date_range_simple" class="form-label">Date Range:</label>
+        </div>
+        <div class="mb-3">
+        <input type="checkbox" class="form-check-input" id="compare_to" placeholder="Enter compare_to"></input>
+        <label for="compare_to" class="form-label">Compare to Date Range:</label>
+        </div>
+        <div class="form-floating mb-3">
+        <input type="select-one" class="form-control" id="report_date_range_simple_compare" placeholder="Enter report_date_range_simple_compare"></input>
+        <label for="report_date_range_simple_compare" class="form-label">Date Range:</label>
+        </div>
+        <div class="form-floating mb-3">
+        <input type="select-one" class="form-control" id="employee_id" placeholder="Enter employee_id"></input>
+        <label for="employee_id" class="form-label">Employee:</label>
+        </div>
+        <div class="form-floating mb-3">
+        <input type="select-one" class="form-control" id="sale_type" placeholder="Enter sale_type"></input>
+        <label for="sale_type" class="form-label">Sale Type:</label>
+        </div>
+        <div class="mb-3">
+        <input type="checkbox" class="form-check-input" id="top_level_cat_summary" placeholder="Enter top_level_cat_summary"></input>
+        <label for="top_level_cat_summary" class="form-label">Show Top Level Category Summary:</label>
+        </div>
+        <div class="mb-3">
+            <div class=" form-group">
+                <label class="col-sm-12 col-md-12 col-lg-8 control-label  ">Export to Excel:</label> 
+                <div class="col-sm-9 col-md-9 col-lg-10">
+                    <input type="radio" name="export_excel" id="export_excel_yes" value="1"> Yes  &nbsp;
+                    <label for="export_excel_yes"><span></span></label>
+                    <input type="radio" name="export_excel" id="export_excel_no" value="0" checked="checked"> No &nbsp;
+                    <label for="export_excel_no"><span></span></label>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="col-md-12 mb-4 bg-light text-right">
+        <button type="submit" id="generate_report" class="btn btn-primary submit_button btn-large">Submit</button>
+    </div>
+</div>
+
+{% endblock content %} 

@@ -1,0 +1,36 @@
+{% extends 'main.html' %} {%load static %} {% block content %}
+
+<div class="card">
+    <div class="card-header"> Detailed Search Reports </div>
+    <div class="card-body col-sm-12 col-md-12 p-5 ">
+        <div class="form-floating mb-3">
+        <input type="select-one" class="form-control" id="report_date_range_simple" placeholder="Enter report_date_range_simple"></input>
+        <label for="report_date_range_simple" class="form-label">Date Range:</label>
+        </div>
+        <div class="mb-3">
+        <input type="checkbox" class="form-check-input" id="select_all" placeholder="Enter select_all"></input>
+        <label for="select_all" class="form-label">Locations:</label>
+        </div>
+        <div class="form-floating mb-3">
+        <input type="select-one" class="form-control" id="matchType" placeholder="Enter matchType"></input>
+        <label for="matchType" class="form-label">Match Type:</label>
+        </div>
+        <div class="mb-3">
+        <input type="checkbox" class="form-check-input" id="matched_items_only" placeholder="Enter matched_items_only"></input>
+        <label for="matched_items_only" class="form-label">Show Only Matched Items In Sale:</label>
+        </div>
+        <div class="mb-3">
+        <input type="checkbox" class="form-check-input" id="tax_exempt" placeholder="Enter tax_exempt"></input>
+        <label for="tax_exempt" class="form-label">Tax Exempt:</label>
+        </div>
+        <div class="mb-3">
+        <input type="checkbox" class="form-check-input" id="export_excel" placeholder="Enter export_excel"></input>
+        <label for="export_excel" class="form-label">Export to Excel:</label>
+        </div>
+    </div>
+    <div class="col-md-12 mb-4 bg-light text-right">
+        <button type="submit" id="generate_report" class="btn btn-primary submit_button btn-large">Submit</button>
+    </div>
+</div>
+
+{% endblock content %} 

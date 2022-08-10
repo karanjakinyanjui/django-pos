@@ -1,0 +1,235 @@
+{% extends 'main.html' %} {%load static %} {% block content %}
+<div class="row mb-5">
+  <div class="col-md-6">
+    <div class="list-group" id="list-tab" role="tablist">
+      <a class="list-group-item list-group-item-action active" id="list-favourites-list" data-bs-toggle="list"
+            href="#list-favourites" role="tab" aria-controls="list-favourites">  <i class="fa-solid fa-heart-circle-check"> </i>      Favourites</a>
+          <div class="divider"></div>
+      <a class="list-group-item list-group-item-action" id="list-appointments-list" data-bs-toggle="list"
+            href="#list-appointments" role="tab" aria-controls="list-appointments"><i class="fa-solid fa-calendar"> </i>       Appointments</a>
+          <div class="divider"></div>
+      <a class="list-group-item list-group-item-action" id="list-categories-list" data-bs-toggle="list"
+            href="#list-categories" role="tab" aria-controls="list-categories"> <i class="bx bx-category"></i> Categories</a>
+          <div class="divider"></div>
+      <a class="list-group-item list-group-item-action" id="list-close-out-list" data-bs-toggle="list" 
+            href="#list-close-out" role="tab" aria-controls="list-close-out"><i class="fa-solid fa-circle-xmark"></i>       Close Out</a>
+          <div class="divider"></div>
+      <a class="list-group-item list-group-item-action" id="list-custom-report-list" data-bs-toggle="list"
+            href="#list-custom-report" role="tab" aria-controls="list-custom-report"><i class="fa-solid fa-magnifying-glass"> </i>      Custom Report</a>
+          <div class="divider"></div>
+      <a class="list-group-item list-group-item-action" id="list-comission-list" data-bs-toggle="list"
+            href="#list-comission" role="tab" aria-controls="list-comission"><i class="fa-solid fa-money-check-dollar"> </i>         Commission</a>
+          <div class="divider"></div>
+      <a class="list-group-item list-group-item-action" id="list-customers-list" data-bs-toggle="list"
+            href="#list-customers" role="tab" aria-controls="list-customers"><i class="fa-solid fa-user"> </i>      Customers</a>
+          <div class="divider"></div>
+      <a class="list-group-item list-group-item-action" id="list-deleted-sales-list" data-bs-toggle="list"
+            href="#list-deleted-sales" role="tab" aria-controls="list-deleted-sales"><i class="fa-solid fa-trash-can"> </i>      Deleted Sales</a>
+          <div class="divider"></div>
+      <a class="list-group-item list-group-item-action" id="list-deliveries-list" data-bs-toggle="list"
+            href="#list-deliveries" role="tab" aria-controls="list-deliveries"><i class="fa-solid fa-truck"> </i>      Deliveries</a>
+          <div class="divider"></div>
+      <a class="list-group-item list-group-item-action" id="list-discounts-list" data-bs-toggle="list"
+            href="#list-discounts" role="tab" aria-controls="list-discounts"><i class="fa-solid fa-wand-sparkles"> </i>      Discounts</a>
+          <div class="divider"></div>
+      <a class="list-group-item list-group-item-action" id="list-employees-list" data-bs-toggle="list"
+      href="#list-employees" role="tab" aria-controls="list-employees"><i class="fa-solid fa-id-badge"> </i>      Employees</a>
+          <div class="divider"></div>
+      <a class="list-group-item list-group-item-action" id="list-expenses-list" data-bs-toggle="list"
+            href="#list-expenses" role="tab" aria-controls="list-expenses"><i class="fa-solid fa-money-check-dollar"> </i>      Expenses</a>
+          <div class="divider"></div>
+      <a class="list-group-item list-group-item-action" id="list-gift-cards-list" data-bs-toggle="list"
+            href="#list-gift-cards" role="tab" aria-controls="list-gift-cards">    <i class="fa-solid fa-gifts"></i> Gift Cards</a>
+          <div class="divider"></div>
+      <a class="list-group-item list-group-item-action" id="list-inventory-reports-list" data-bs-toggle="list"
+            href="#list-inventory-reports" role="tab" aria-controls="list-inventory-reports"><i class="fa-solid fa-chart-simple"> </i>      Inventory Reports</a>
+          <div class="divider"></div>
+      <a class="list-group-item list-group-item-action" id="list-invoices-list" data-bs-toggle="list"
+            href="#list-invoices" role="tab" aria-controls="list-invoices"><i class="fa-solid fa-chart-simple"> </i>      Invoices</a>
+          <div class="divider"></div>
+      <a class="list-group-item list-group-item-action" id="list-item-kits-list" data-bs-toggle="list"
+            href="#list-item-kits" role="tab" aria-controls="list-item-kits"><i class="fa-solid fa-server"> </i>      Item Kits</a>
+          <div class="divider"></div>
+      <a class="list-group-item list-group-item-action" id="list-items-list" data-bs-toggle="list"
+            href="#list-items" role="tab" aria-controls="list-items"><i class="fa-solid fa-hard-drive"> </i>      Items</a>
+          <div class="divider"></div>
+      <a class="list-group-item list-group-item-action" id="list-manufacturers-list" data-bs-toggle="list"
+            href="#list-manufacturers" role="tab" aria-controls="list-manufacturers"> <i class="bx bx-category"></i>Manufacturers</a>
+          <div class="divider"></div>
+
+      <a class="list-group-item list-group-item-action" id="list-payments-list" data-bs-toggle="list"
+            href="#list-payments" role="tab" aria-controls="list-payments"><i class="fa-solid fa-money-check-dollar"> </i>      Payments</a>
+          <div class="divider"></div>
+
+      <a class="list-group-item list-group-item-action" id="list-price-rules-list" data-bs-toggle="list"
+            href="#list-price-rules" role="tab" aria-controls="list-price-rules"><i class="fa-solid fa-hard-drive"> </i>      Price Rules</a>
+          <div class="divider"></div>
+
+      <a class="list-group-item list-group-item-action" id="list-profit-loss-list" data-bs-toggle="list"
+            href="#list-profit-loss" role="tab" aria-controls="list-profit-loss"><i class="fa-solid fa-cart-plus"></i> Profit and Loss</a>
+          <div class="divider"></div>
+
+      <a class="list-group-item list-group-item-action" id="list-receiving-list" data-bs-toggle="list"
+            href="#list-receiving" role="tab" aria-controls="list-receiving"> <i class="fa-solid fa-cloud-arrow-down"> </i>     Receiving</a>
+          <div class="divider"></div>
+
+      <a class="list-group-item list-group-item-action" id="list-register-list" data-bs-toggle="list"
+            href="#list-register" role="tab" aria-controls="list-register"><i class="fa-solid fa-magnifying-glass"> </i>      Register</a>
+          <div class="divider"></div>
+
+      <a class="list-group-item list-group-item-action" id="list-sales-list" data-bs-toggle="list"
+            href="#list-sales" role="tab" aria-controls="list-sales"><i class="fa-solid fa-cart-shopping"> </i>      Sales</a>
+          <div class="divider"></div>
+
+      <a class="list-group-item list-group-item-action" id="list-suppliers-list" data-bs-toggle="list"
+            href="#list-suppliers" role="tab" aria-controls="list-suppliers"><i class="fa-solid fa-cloud-arrow-down"></i> Suppliers</a>
+          <div class="divider"></div>
+
+      <a class="list-group-item list-group-item-action" id="list-suspended-sales-list" data-bs-toggle="list"
+            href="#list-suspended-sales" role="tab" aria-controls="list-suspended-sales"><i class="fa-solid fa-cloud-arrow-down"></i>Suspended Sales</a>
+          <div class="divider"></div>
+
+      <a class="list-group-item list-group-item-action" id="list-tags-list" data-bs-toggle="list"
+            href="#list-tags" role="tab" aria-controls="list-tags">     <i class="fa-solid fa-tags"></i> Tags</a>
+          <div class="divider"></div>
+
+      <a class="list-group-item list-group-item-action" id="list-taxes-list" data-bs-toggle="list"
+            href="#list-taxes" role="tab" aria-controls="list-taxes"><i class="fa-solid fa-calendar-day"> </i>      Taxes</a>
+          <div class="divider"></div>
+
+      <a class="list-group-item list-group-item-action" id="list-tiers-list" data-bs-toggle="list" 
+            href="#list-tiers" role="tab" aria-controls="list-tiers">    <i class="fa-solid fa-chart-line"></i> Tiers</a>
+          <div class="divider"></div>
+      <a class="list-group-item list-group-item-action" id="list-time-clock-list" data-bs-toggle="list" 
+            href="#list-time-clock" role="tab" aria-controls="list-time-clock"> <i class="fa-solid fa-bell"></i> Time Clock</a>
+          <div class="divider"></div>
+      </div>    
+  </div>
+
+  <div class="col-md-6 col-sm-12 sm-mt-3">
+    <div data-bs-spy="scroll" class="tab-content ps-2" data-bs-target="#list-tab" data-bs-offset="0" tabindex="0" 
+      id="nav-tabContent">
+      <div class="tab-pane fade show active" id="list-favourites" role="tabpanel" aria-labelledby="list-favourites-list">
+      {% include 'reports/favourites.html' %}
+      </div>
+      <div class="tab-pane fade" id="list-appointments" role="tabpanel" aria-labelledby="list-appointments-list">
+      {% include 'reports/appointments.html' %}
+      </div>
+      <div class="tab-pane fade" id="list-categories" role="tabpanel" aria-labelledby="list-categories-list">
+      {% include 'reports/categories.html' %}
+      </div>
+      <div class="tab-pane fade" id="list-close-out" role="tabpanel" aria-labelledby="list-close-out-list">
+      {% include 'reports/close_out.html' %}
+      </div>
+
+          <div class="tab-pane fade" id="list-custom-report" role="tabpanel" aria-labelledby="list-custom-report-list">
+      {% include 'reports/custom_report.html' %}
+      </div>
+
+          <div class="tab-pane fade" id="list-comission" role="tabpanel" aria-labelledby="list-comission-list">
+      {% include 'reports/commission.html' %}
+      </div>
+
+          <div class="tab-pane fade" id="list-customers" role="tabpanel" aria-labelledby="list-customers-list">
+      {% include 'reports/customers.html' %}
+      </div>
+
+          <div class="tab-pane fade" id="list-deleted-sales" role="tabpanel" aria-labelledby="list-deleted-sales-list">
+      {% include 'reports/deleted_sales.html' %}
+      </div>
+
+          <div class="tab-pane fade" id="list-deliveries" role="tabpanel" aria-labelledby="list-deliveries-list">
+      {% include 'reports/deliveries.html' %}
+      </div>
+
+          <div class="tab-pane fade" id="list-discounts" role="tabpanel" aria-labelledby="list-discounts-list">
+      {% include 'reports/discounts.html' %}
+      </div>
+
+          <div class="tab-pane fade" id="list-employees" role="tabpanel" aria-labelledby="list-employees-list">
+      {% include 'reports/employees.html' %}
+      </div>
+
+          <div class="tab-pane fade" id="list-expenses" role="tabpanel" aria-labelledby="list-expenses-list">
+      {% include 'reports/expenses.html' %}
+      </div>
+
+      <div class="tab-pane fade" id="list-gift-cards" role="tabpanel" aria-labelledby="list-gift-cards-list">
+      {% include 'reports/gift_cards.html' %}
+      </div>
+
+      <div class="tab-pane fade" id="list-inventory-reports" role="tabpanel" aria-labelledby="list-inventory-reports-list">
+      {% include 'reports/inventory_reports.html' %}
+      </div>
+
+      <div class="tab-pane fade" id="list-invoices" role="tabpanel" aria-labelledby="list-invoices-list">
+            {% include 'reports/invoices.html' %}
+            </div>
+
+      <div class="tab-pane fade" id="list-item-kits" role="tabpanel" aria-labelledby="list-item-kits-list">
+            {% include 'reports/item_kits.html' %}
+            </div>
+
+      <div class="tab-pane fade" id="list-items" role="tabpanel" aria-labelledby="list-items-list">
+            {% include 'reports/items.html' %}
+            </div>
+
+      <div class="tab-pane fade" id="list-manufacturers" role="tabpanel" aria-labelledby="list-manufacturers-list">
+            {% include 'reports/manufacturers.html' %}
+            </div>
+
+      <div class="tab-pane fade" id="list-payments" role="tabpanel" aria-labelledby="list-payments-list">
+            {% include 'reports/payments.html' %}
+            </div>   
+
+      <div class="tab-pane fade" id="list-price-rules" role="tabpanel" aria-labelledby="list-price-rules-list">
+            {% include 'reports/price_rules.html' %}
+            </div>  
+
+      <div class="tab-pane fade" id="list-profit-loss" role="tabpanel" aria-labelledby="list-profit-loss-list">
+            {% include 'reports/profit_loss.html' %}
+            </div>  
+
+      <div class="tab-pane fade" id="list-receiving" role="tabpanel" aria-labelledby="list-receiving-list">
+            {% include 'reports/receiving.html' %}
+            </div>   
+
+      <div class="tab-pane fade" id="list-register" role="tabpanel" aria-labelledby="list-register-list">
+            {% include 'reports/register.html' %}
+            </div>   
+
+      <div class="tab-pane fade" id="list-sales" role="tabpanel" aria-labelledby="list-sales-list">
+            {% include 'reports/sales.html' %}
+            </div>  
+
+      <div class="tab-pane fade" id="list-suppliers" role="tabpanel" aria-labelledby="list-suppliers-list">
+            {% include 'reports/suppliers.html' %}
+            </div>  
+
+      <div class="tab-pane fade" id="list-suspended-sales" role="tabpanel" aria-labelledby="list-suspended-sales-list">
+            {% include 'reports/suspended_sales.html' %}
+            </div>  
+
+      <div class="tab-pane fade" id="list-tags" role="tabpanel" aria-labelledby="list-tags-list">
+            {% include 'reports/tags.html' %}
+            </div>  
+
+      <div class="tab-pane fade" id="list-taxes" role="tabpanel" aria-labelledby="list-taxes-list">
+            {% include 'reports/taxes.html' %}
+            </div>  
+
+      <div class="tab-pane fade" id="list-tiers" role="tabpanel" aria-labelledby="list-tiers-list">
+            {% include 'reports/tiers.html' %}
+            </div>  
+      
+      <div class="tab-pane fade" id="list-time-clock" role="tabpanel" aria-labelledby="list-time-clock-list">
+            {% include 'reports/time_clock.html' %}
+            </div> 
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% endblock content %}

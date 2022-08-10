@@ -7,9 +7,10 @@ Description:
 
 
 """
+from ast import Div
 from dataclasses import fields
 from crispy_forms.helper import FormHelper
-from crispy_forms.layout import Submit, Layout, Row, Column
+from crispy_forms.layout import Submit, Layout, Row, Column, HTML, Button
 from crispy_forms.bootstrap import InlineRadios, FormActions
 from django import forms
 from django.utils import timezone
@@ -92,11 +93,12 @@ class ItemsForm(forms.ModelForm):
                 Column('is_service'),
                 Column('disable_loyalty'),
             ),
-            
+
             'loyalty_multiplier',
             FormActions(
                 Submit('submit', 'Submit'),
-                Submit('cancel', 'cancel', css_class='ml-5 btn btn-danger')
+                Button('cancel', 'Cancel', css_class='ml-5 btn btn-danger',
+                       onclick="window.history.back()"),
             )
         )
 

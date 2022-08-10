@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'inventory',
     'locations',
     'people',
+    'reports',
     'app_config',
     'crispy_forms',
     'crispy_bootstrap5',

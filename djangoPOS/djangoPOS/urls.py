@@ -22,5 +22,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name="home"),
     path('items/', include('inventory.urls')),
+    path('reports/', include('reports.urls')),
+
 
 ]
